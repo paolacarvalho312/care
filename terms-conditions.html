@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms and Conditions – Optimuu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #4caf50;
+        --primary-dark: #3d8c40;
+        --text: #1a1a1a;
+        --background: #ffffff;
+        --gray-100: #f8f9fa;
+        --gray-200: #e9ecef;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        --container-width: 1280px;
+        --header-height: 80px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        color: var(--text);
+        line-height: 1.7;
+        background: var(--background);
+      }
+      .container {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      /* Header container override for full-width responsiveness */
+      header > .container {
+        max-width: 100%;
+        padding: 0 1rem;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: var(--header-height);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--gray-200);
+        z-index: 1000;
+      }
+      .header-inner {
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo img {
+        height: 40px;
+      }
+      nav ul {
+        display: flex;
+        gap: 4rem;
+        list-style: none;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 1.125rem;
+        transition: color 0.2s ease;
+        position: relative;
+      }
+      nav a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: var(--primary);
+        transition: width 0.2s ease;
+      }
+      nav a:hover::after,
+      nav a.active::after {
+        width: 100%;
+      }
+      .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      @media (max-width: 768px) {
+        nav {
+          display: none;
+        }
+        .mobile-menu-toggle {
+          display: block;
+        }
+        nav.open {
+          display: block;
+          background: var(--background);
+          position: absolute;
+          top: var(--header-height);
+          right: 0;
+          left: 0;
+          padding: 1rem 2rem;
+          box-shadow: var(--shadow-md);
+        }
+        nav.open ul {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+      @media (max-width: 1024px) {
+        .container {
+          padding: 0 1.5rem;
+        }
+        nav ul {
+          gap: 2rem;
+        }
+      }
+      main {
+        padding-top: calc(var(--header-height) + 4rem);
+        padding-bottom: 6rem;
+      }
+      .terms-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 0;
+      }
+      .terms-content h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .terms-section {
+        margin-bottom: 2rem;
+      }
+      .terms-section p {
+        margin-bottom: 1rem;
+      }
+      .terms-section ul {
+        list-style: disc;
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      footer {
+        background: var(--gray-100);
+        padding: 4rem 0;
+      }
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+      }
+      .footer-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .footer-top img {
+        height: 40px;
+      }
+      .footer-menu ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+      .footer-menu a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 1rem;
+        transition: color 0.2s ease;
+      }
+      .footer-menu a:hover {
+        color: var(--primary-dark);
+      }
+      .footer-copyright {
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img
+            src="images/cropped-cropped-Diapositiva2-scaled-2.webp"
+            alt="Optimuu Logo"
+          />
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Mobile Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Apply now.html">Apply Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="terms-content">
+        <h1>Terms and Conditions</h1>
+        <div class="terms-section">
+          <p><strong>Last updated:</strong> February 16, 2025</p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>1. Introduction</strong><br />
+            Welcome to JhonCare! These Terms and Conditions govern your access
+            to and use of our website, products, services, and platform. By
+            accessing or using our services, you agree to comply with these
+            terms and conditions, and any applicable laws. If you do not agree
+            to these terms, please refrain from using our platform.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>2. Acceptance of Terms</strong><br />
+            By accessing, browsing, or using our services, you acknowledge that
+            you have read, understood, and agree to be bound by these Terms and
+            Conditions, including any future updates. If you do not agree to
+            these terms, you must immediately stop using our services.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>3. User Responsibilities</strong><br />
+            You are responsible for maintaining the accuracy of any information
+            you provide while using our services, including account registration
+            and payment details. You agree to use our platform in compliance
+            with all applicable laws, and refrain from engaging in fraudulent
+            activities, abuse, or other harmful actions that could disrupt or
+            damage the platform and its users.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>4. Account Registration</strong><br />
+            In order to access certain features of the platform, you may be
+            required to register an account. You agree to provide true,
+            accurate, and complete information during registration, and to
+            update it as necessary. You are solely responsible for the
+            confidentiality of your account credentials and any activity that
+            occurs under your account.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>5. Meeting Scheduling and Approval</strong><br />
+            To ensure that your cause is valid, you will need to schedule a
+            meeting via <strong>WhatsApp</strong> with the JhonCare team. During
+            this meeting, we will discuss the nature of your cause and assess if
+            it meets our criteria for approval. You must be available for this
+            meeting and comply with all requests from our team to proceed with
+            your application. Failure to schedule or attend this meeting may
+            result in your request being denied.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>6. Prohibited Activities</strong><br />
+            You may not engage in the following activities while using our
+            platform:
+          </p>
+          <ul>
+            <li>
+              <strong>Fraudulent Activities:</strong> Engaging in fraudulent or
+              deceptive activities, including chargebacks, misrepresentation,
+              or identity theft.
+            </li>
+            <li>
+              <strong>Disrupting Services:</strong> Interfering with or
+              disrupting our platform, services, or networks.
+            </li>
+            <li>
+              <strong>Illegal Activities:</strong> Violating any applicable
+              local, national, or international laws.
+            </li>
+            <li>
+              <strong>Misuse of Platform:</strong> Using our services to send
+              spam, promote malware, or engage in any other harmful activity.
+            </li>
+          </ul>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>7. Intellectual Property</strong><br />
+            All content available on our platform, including text, graphics,
+            logos, images, software, and other materials, is the property of
+            JhonCare or its licensors and is protected by copyright laws. You
+            may not copy, reproduce, or distribute any content from the platform
+            without prior written consent.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>8. Limitation of Liability</strong><br />
+            To the fullest extent permitted by law, JhonCare and its affiliates
+            are not liable for any indirect, incidental, special, or
+            consequential damages arising out of your use or inability to use
+            the platform. This includes, but is not limited to, damages for loss
+            of profits, data, or business interruption, even if we were advised
+            of the possibility of such damages.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>9. Termination</strong><br />
+            We reserve the right to suspend or terminate your access to our
+            platform at any time, without prior notice, for any reason,
+            including but not limited to violation of these Terms and
+            Conditions. Upon termination, your right to use our platform will
+            immediately cease.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>10. Not a Crowdfunding or Donation Platform</strong><br />
+            JhonCare is not a <strong>crowdfunding</strong> or
+            <strong>donation platform</strong>. Our services are designed for
+            individuals who require assistance with personal needs through
+            <strong>commercial transactions</strong> that are not related to
+            charitable causes, donations, or fundraising activities. Any
+            financial contributions made through our platform are for the
+            purposes of purchasing services or products and are not considered
+            charitable donations.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>11. Changes to These Terms</strong><br />
+            We reserve the right to update or modify these Terms and Conditions
+            at any time, without notice. Any changes will be posted on this page
+            and will take effect immediately upon publication. It is your
+            responsibility to review these Terms periodically to stay informed
+            of any updates. Continued use of our platform constitutes acceptance
+            of any modified terms.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <p>
+            <strong>12. Contact Information</strong><br />
+            If you have any questions or concerns regarding these Terms and
+            Conditions or our services, please contact us at:
+          </p>
+          <ul>
+            <li><strong>Email:</strong> contact@jhoncare.com</li>
+            <li><strong>Phone:</strong> [Your Contact Number]</li>
+            <li><strong>Website:</strong> [Your Website URL]</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-top">
+          <img src="images/logo.png" alt="Optimuu Logo" />
+          <p class="footer-copyright">
+            © 2025 Optimuu. All rights reserved.
+          </p>
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+            <li><a href="terms-conditions.html">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+      const nav = document.querySelector("header nav");
+      mobileMenuToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
